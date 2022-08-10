@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+     <br><br><br><br><br>
+    <div class="card" style="width: 25rem;">
+        <!--<img src="kalyani-akella-gml9g1kRQcM-unsplash.jpg" class="card-img-top" alt="...">-->
+        <div class="card-body">
+            <form action=" " method="POST">
+                {% csrf_token %}
+
+            {% if error%}
+                <div class="alert alert-danger" role="alert">{{error}}</div>
+            {% endif%}  
+                <center>
+                    <table border="0">
+                        <tr>
+                            <td colspan="2" height="50">
+                                <center><b>SIGNUP</b></center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="50">Username:</td>
+                            <td><input type="text" name="username" value="{{values.username}}"></td>
+                        </tr>
+                        <tr>
+                            <td height="50">Email:</td>
+                            <td> <input required type="text" name="email" value="{{values.email}}"></td>
+                        </tr>
+                        <tr>
+                            <td height="50">Password:</td>
+                            <td> <input type="password" name="password" value="{{values.password}}"></td>
+                        </tr>
+                        <tr>
+                            <td height="50">Retype Password:</td>
+                            <td> <input required type="password" name="retypepassword"value="{{values.retypepassword}}"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" height="90">
+                                <center>
+                                    <button type="signup" href="signup">Signup</button>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" height="10">
+                                <center>Already Have Account!!<a href="login/">Login</center></a></td>
+                        </tr>
+                    </table>
+                    </center>
+            </form>
+        </div>
+    </div>
+    <style>
+        body {
+            background-image: url("../static/kalyani-akella-gml9g1kRQcM-unsplash.jpg");
+            background-repeat: no-repeat;
+            background-size: 1540px 800px;
+        }
+        
+        .card {
+            background: rgba(245, 245, 245, 0.697);
+            left: 40%;
+            flex: auto;
+            width: auto;
+            height: 400px;
+            background-color: linear-gradiant(45deg, transparent, transparent 40%, aqua), lenear-gradiant(#262626, #141414);
+        }
+        
+        .collapse {
+            width: 75%;
+            margin: auto;
+            padding: 0%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(240, 248, 255, 0.553);
+        }
+        
+        .collapse ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+        }
+        
+        .collapse ul li a {
+            text-decoration: none;
+            color: rgb(8, 8, 8);
+            font-size: 50;
+            font-family: cursive;
+            text-transform: uppercase;
+        }
+        
+        .collapse ul li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: black;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            transition: 0.5s;
+        }
+        
+        .collapse ul li:hover:after {
+            width: 100%;
+        }
+        
+        p {
+            font-family: cursive;
+            font-size: 250%;
+            font-weight: bold;
+        }
+    </style>
+</body>
+
+</html>
