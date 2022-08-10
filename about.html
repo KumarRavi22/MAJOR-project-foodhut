@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+
+    <div class="about-section">
+        <h1>About Us Page</h1>
+        <p>
+            <h4>At
+                <b>‘Food Hut’</b> , we’re tied in with presenting crisp food, regardless of whether it implies going the additional mile. When you stroll through our entryways, we do what we can to make everybody feel comfortable in light of the fact
+                that our family stretches out through your local.<b>‘Food Hut’</b> is an organization that is continually developing.We’ve kept on extending’ vision to help other individuals end up effective entrepreneurs by owning an ‘Food Hut’ establishment.
+                We search for franchisees who are focused on quality, not compromising. We Believe in Quality. All around. Quality food can’t be made without quality initiative. Find out about the general population driving The<b>‘Food Hut’</b>.</h4>
+        </p>
+    </div>
+
+    <h2 style="text-align:center; background:lightyellow;"><b><u>Our Team</h2>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="../static/ravi(1).jpg" alt="ravi" style="width:100%">
+                <div class="container">
+                    <h2>Ravi Kumar</h2>
+                    <p class="title">CEO & Founder</p>
+                    <p>Food Hut India.</p>
+                    <p>ravik@example.com</p>
+                    <p>contact:987678996</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="../static/abhi(1).jpg" alt="abhinav" style="width:100%">
+                <div class="container">
+                    <h2>Abinav singh</h2>
+                    <p class="title">Co-Founder</p>
+                    <p>Food Hut India</p>
+                    <p>abhinavsingh@example.com</p>
+                    <p>contact:987678996</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="../static/vai(1).jpg" alt="lady gaga" style="width:100%">
+                <div class="container">
+                    <h2>Vaishnavi</h2>
+                    <p class="title">Designer</p>
+                    <p>Food Hut India</p>
+                    <p>ladygaga@example.com</p>
+                    <p>contact:987678996</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        background-image: url("../static/photo_2022-06-04_12-42-52\(1\).jpg");
+    }
+    
+    html {
+        box-sizing: border-box;
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+    
+    .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+    }
+    
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 50px;
+        background-color: skyblue;
+    }
+    
+    .about-section {
+        padding: 50px;
+        text-align: center;
+        color: black;
+    }
+    
+    .container {
+        padding: 0 16px;
+    }
+    
+    w3 .container::after,
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    .title {
+        color: grey;
+    }
+    
+    .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    .button:hover {
+        background-color: red;
+    }
+    
+    @media screen and (max-width: 650px) {
+        .column {
+            width: 100%;
+            display: block;
+        }
+    }
+</style>
+
+{% endblock content %}
